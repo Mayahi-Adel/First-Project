@@ -1,59 +1,245 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    display: flex;
-    flex-wrap: wrap;
-}
-header {
-    width: 100%;
-    height: 350px;;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: blueviolet;
-}
-nav {
-    background: black;
-    top: 280px;
-    width: 100%;
-    height: 70px;
-    transition: all 0.5s;
-    position: relative;
-    z-index: 1;
-}
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-nav li {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-li.logo{
-    max-width: 0;
-    overflow: hidden;
-    background: white;
-    transition: all .5s;
-    font-weight: 600;
-    
-}
-nav a {
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-    color: white;
-    transition: all 0.2s;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-}
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            html {
+                font-size: 62.5%;
+            }
+            
+            body {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            header {
+                width: 100%;
+                height: 350px;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: blueviolet;
+            }
+            
+            nav {
+                background: black;
+                width: 100%;
+                height: 70px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+            }
+            
+            nav li {
+                flex: 1;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            li.logo {
+                max-width: 0;
+                overflow: hidden;
+                background: white;
+                transition: all .5s;
+                font-weight: 600;
+            }
+            
+            li.logo img {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .linknav {
+                text-decoration: none;
+                padding: 20px;
+                display: inline-block;
+                color: white;
+                transition: all 0.1s;
+                text-transform: uppercase;
+                font-size: 1.7rem;
+            }
+            
+            .active,
+            .linknav:hover {
+                background-color: white;
+                color: black
+            }
+            
+            footer div img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .footer-distributed {
+                background: gainsboro;
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+                box-sizing: border-box;
+                width: 100%;
+                text-align: left;
+                font: bold 1.5rem sans-serif;
+                padding: 10px 10px;
+            }
+            
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: inline-block;
+                vertical-align: top;
+            }
+            /* Footer left */
+            
+            .footer-distributed .footer-left {
+                width: 40%;
+            }
+            /* The company logo */
+            
+            .footer-distributed h3 {
+                color: #ffffff;
+                font: normal 36px 'Open Sans', cursive;
+                margin: 0;
+            }
+            
+            .footer-distributed h3 span {
+                color: lightseagreen;
+            }
+            /* Footer links */
+            
+            .footer-distributed .footer-links {
+                color: #ffffff;
+                margin: 20px 0 12px;
+                padding: 0;
+            }
+            
+            .footer-distributed .footer-links a {
+                display: inline-block;
+                line-height: 1.8;
+                font-weight: 400;
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .footer-distributed .footer-company-name {
+                color: #222;
+                font-weight: normal;
+                margin: 0px;
+            }
+            /* Footer Center */
+            
+            .footer-distributed .footer-center {
+                width: 40%;
+            }
+            
+            .footer-distributed .footer-center img {
+                background-color: #33383b;
+                color: black;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 42px;
+                margin: 10px 15px;
+                vertical-align: middle;
+            }
+            
+            .footer-distributed .footer-center p {
+                display: inline-block;
+                color: black;
+                font-weight: 400;
+                vertical-align: middle;
+                margin: 0;
+            }
+            
+            .footer-distributed .footer-center p span {
+                display: block;
+                font-weight: normal;
+                font-size: 1.5rem;
+                line-height: 2;
+            }
+            
+            .footer-distributed .footer-center p a {
+                color: lightseagreen;
+                text-decoration: none;
+                ;
+            }
+            
+            .footer-distributed .footer-links a:before {
+                content: "|";
+                font-weight: 300;
+                left: 0;
+                color: black;
+                display: inline-block;
+                padding-right: 5px;
+            }
+            
+            .footer-distributed .footer-links .link-1:before {
+                content: none;
+            }
+            /* Footer Right */
+            
+            .footer-distributed .footer-right {
+                width: 15%;
+            }
+            
+            .footer-distributed .footer-company-about span {
+                display: block;
+                color: black;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            
+            .footer-distributed .footer-icons {
+                margin-top: 25px;
+            }
+            
+            .footer-distributed .footer-icons a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                background-color: #33383b;
+                border-radius: 2px;
+                font-size: 1.5rem;
+                color: #ffffff;
+                text-align: center;
+                line-height: 35px;
+                margin-right: 3px;
+                margin-bottom: 5px;
+            }
+            
+            .footer-distributed .footer-icons a img {
+                width: 35px;
+                height: 35px;
+                border-radius: 2px;
+                font-size: 1.5rem;
+                text-align: center;
+                background-color: white;
+                line-height: 35px;
+                margin-right: 3px;
+                margin-bottom: 5px;
+            }
+            /* If you don't want the footer to be responsive, remove these media queries */
+            
+            @media (max-width: 880px) {
+                .footer-distributed {
+                    font: bold 14px sans-serif;
+                }
+                .footer-distributed .footer-left,
+                .footer-distributed .footer-center,
+                .footer-distributed .footer-right {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+                .footer-distributed .footer-center i {
+                    margin-left: 0;
+                }
+            }
