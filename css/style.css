@@ -140,7 +140,7 @@ li.logo{
     display: flex;
 }
 
-.center >  figure {
+.center > a > figure {
     display: flex;
     border: 1px solid lightgrey;
     width: 400px;
@@ -149,7 +149,7 @@ li.logo{
     margin: 7px;
 }
 
-.center > figure > img {
+.center > a >figure > img {
     border: 3px;
     margin: 5px;
     border: 1px solid gray;
@@ -164,7 +164,7 @@ li.logo{
 
 }
 
-aside > figure {
+aside > a > figure {
     width: 400px;
     height: 480px;
     border: 1px solid lightgray;
@@ -174,19 +174,17 @@ aside > figure {
     margin: 68px 10px 10px 10px;
 
 }
-aside > figure > img{
+aside > a >figure > img{
     border:  1px solid gray;
     border-radius: 5px;
     margin-left: 8px;
 
 }
 
- a {
+a {
     text-decoration: none;
     color: #3D3E3D;
     display: inline-block;
-
- 
 } 
 
 
