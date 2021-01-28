@@ -9,7 +9,7 @@ html {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
     padding: 7px;
 }
 h3 {
@@ -17,7 +17,9 @@ h3 {
     padding: 7px;
 }
 p {
+    font-size: 1.2rem;
     padding: 7px;
+    line-height: 20px;
 }
 
 body {
@@ -28,7 +30,7 @@ body {
 }
 header {
     width: 100%;
-    height: 350px;;
+    height: 420px;;
     display: flex;
     flex-wrap: wrap;
     
@@ -138,7 +140,7 @@ li.logo{
     display: flex;
 }
 
-.center > figure {
+.center >  figure {
     display: flex;
     border: 1px solid lightgrey;
     width: 400px;
@@ -161,18 +163,31 @@ li.logo{
 #second-box{
 
 }
-.center{
+
+aside > figure {
+    width: 400px;
+    height: 480px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px lightgray;
+    padding: 7px;
+    margin: 68px 10px 10px 10px;
 
 }
-/* nav a {
+aside > figure > img{
+    border:  1px solid gray;
+    border-radius: 5px;
+    margin-left: 8px;
+
+}
+
+ a {
     text-decoration: none;
-    padding: 20px;
+    color: #3D3E3D;
     display: inline-block;
-    color: white;
-    transition: all 0.2s;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-} */
+
+ 
+} 
 
 
 
@@ -215,6 +230,7 @@ footer div img {
     text-align: left;
     font: bold 1.5rem sans-serif;
     padding: 10px 10px;
+    margin-top: 50px;
 }
 
 .footer-distributed .footer-left,
@@ -227,6 +243,9 @@ footer div img {
 
 .footer-distributed .footer-left {
     width: 40%;
+}
+.footer-distributed .footer-left > p {
+    margin: -50px 0px 0px 50px;
 }
 /* The company logo */
 
@@ -260,6 +279,7 @@ footer div img {
     font-weight: normal;
     margin: 0px;
 }
+
 /* Footer Center */
 
 .footer-distributed .footer-center {
