@@ -8,10 +8,23 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+    font-size: 4rem;
+    padding: 7px;
+}
+h3 {
+    font-size: 1.7rem;
+    padding: 7px;
+}
+p {
+    padding: 7px;
+}
+
 body {
     display: flex;
     flex-wrap: wrap;
     height: 900px;
+    color: #3D3E3D;
 }
 header {
     width: 100%;
@@ -62,19 +75,19 @@ header {
 }
 
 .slide:nth-of-type(1) {
-    background: url(../asset/banner/banner1.jpg);
+    background: url(../asset/banner/banner1.jpg) center center;
 }
 .slide:nth-of-type(2) {
-    background: url(../asset/banner/banner2.jpg);
+    background: url(../asset/banner/banner2.jpg) center center;
 }
 .slide:nth-of-type(3) {
-    background: url(../asset/banner/banner3.jpg);
+    background: url(../asset/banner/banner3.jpg) center center;
 }
 .slide:nth-of-type(4) {
-    background: url(../asset/banner/banner4.jpg);
+    background: url(../asset/banner/banner4.jpg) center center;
 }
 .slide:nth-of-type(5) {
-    background: url(../asset/banner/banner5.jpg);
+    background: url(../asset/banner/banner5.jpg) center center;
 }
 
 .showing {
@@ -119,6 +132,37 @@ li.logo{
     transition: all .5s;
     font-weight: 600;
     
+}
+
+.center{
+    display: flex;
+}
+
+.center > figure {
+    display: flex;
+    border: 1px solid lightgrey;
+    width: 400px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    margin: 7px;
+}
+
+.center > figure > img {
+    border: 3px;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+#first-box{
+    
+
+}
+
+#second-box{
+
+}
+.center{
+
 }
 /* nav a {
     text-decoration: none;
