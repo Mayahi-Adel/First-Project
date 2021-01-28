@@ -12,10 +12,17 @@ h1 {
     font-size: 3.7rem;
     padding: 7px;
 }
+
+h2 {
+    font-size: 2rem;
+    padding: 7px;
+}
+
 h3 {
     font-size: 1.7rem;
     padding: 7px;
 }
+
 p {
     font-size: 1.2rem;
     padding: 7px;
@@ -28,19 +35,18 @@ body {
     height: 900px;
     color: #3D3E3D;
 }
+
 header {
     width: 100%;
-    height: 420px;;
+    height: 420px;
+    ;
     display: flex;
     flex-wrap: wrap;
-    
 }
 
-#banniere{
+#banniere {
     width: 100%;
     height: 100%;
-    
-    
 }
 
 #slides {
@@ -61,7 +67,6 @@ header {
     z-index: 1;
     border: 1px solid gray;
     border-radius: 1%;
-
     -webkit-transition: opacity 5;
     -moz-transition: opacity 5;
     -o-transition: opacity 5;
@@ -79,15 +84,19 @@ header {
 .slide:nth-of-type(1) {
     background: url(../asset/banner/banner1.jpg) center center;
 }
+
 .slide:nth-of-type(2) {
     background: url(../asset/banner/banner2.jpg) center center;
 }
+
 .slide:nth-of-type(3) {
     background: url(../asset/banner/banner3.jpg) center center;
 }
+
 .slide:nth-of-type(4) {
     background: url(../asset/banner/banner4.jpg) center center;
 }
+
 .slide:nth-of-type(5) {
     background: url(../asset/banner/banner5.jpg) center center;
 }
@@ -97,14 +106,14 @@ header {
     z-index: 2;
 }
 
-
-#logo{
+#logo {
     position: absolute;
     z-index: 7;
     width: 250px;
     height: 250px;
     background-image: url(../asset/logo-1.png);
 }
+
 nav {
     background: black;
     /* top: 280px; */
@@ -114,12 +123,14 @@ nav {
     position: relative;
     z-index: 99;
 }
-nav ul{
+
+nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
 }
+
 nav li {
     flex: 1;
     text-align: center;
@@ -127,20 +138,20 @@ nav li {
     justify-content: center;
     align-items: center;
 }
-li.logo{
+
+li.logo {
     max-width: 0;
     overflow: hidden;
     background: white;
     transition: all .5s;
     font-weight: 600;
-    
 }
 
-.center{
+.center {
     display: flex;
 }
 
-.center > a > figure {
+.center>a>figure {
     display: flex;
     border: 1px solid lightgrey;
     width: 400px;
@@ -149,22 +160,18 @@ li.logo{
     margin: 7px;
 }
 
-.center > a >figure > img {
+.center>a>figure>img {
     border: 3px;
     margin: 5px;
     border: 1px solid gray;
     border-radius: 5px;
 }
-#first-box{
-    
 
-}
+#first-box {}
 
-#second-box{
+#second-box {}
 
-}
-
-aside > a > figure {
+aside>a>figure {
     width: 400px;
     height: 480px;
     border: 1px solid lightgray;
@@ -172,27 +179,22 @@ aside > a > figure {
     box-shadow: 5px 5px 5px 5px lightgray;
     padding: 7px;
     margin: 68px 10px 10px 10px;
-
 }
-aside > a >figure > img{
-    border:  1px solid gray;
+
+aside>a>figure>img {
+    border: 1px solid gray;
     border-radius: 5px;
     margin-left: 8px;
-
 }
 
 a {
     text-decoration: none;
     color: #3D3E3D;
     display: inline-block;
-} 
-
+}
 
 
 /*   Footer   */
-
-
-
 
 li.logo img {
     width: 70px;
@@ -237,14 +239,19 @@ footer div img {
     display: inline-block;
     vertical-align: top;
 }
+
+
 /* Footer left */
 
 .footer-distributed .footer-left {
     width: 40%;
 }
-.footer-distributed .footer-left > p {
+
+.footer-distributed .footer-left>p {
     margin: -50px 0px 0px 50px;
 }
+
+
 /* The company logo */
 
 .footer-distributed h3 {
@@ -256,6 +263,8 @@ footer div img {
 .footer-distributed h3 span {
     color: lightseagreen;
 }
+
+
 /* Footer links */
 
 .footer-distributed .footer-links {
@@ -277,6 +286,7 @@ footer div img {
     font-weight: normal;
     margin: 0px;
 }
+
 
 /* Footer Center */
 
@@ -329,6 +339,8 @@ footer div img {
 .footer-distributed .footer-links .link-1:before {
     content: none;
 }
+
+
 /* Footer Right */
 
 .footer-distributed .footer-right {
@@ -373,6 +385,8 @@ footer div img {
     margin-right: 3px;
     margin-bottom: 5px;
 }
+
+
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
@@ -390,4 +404,51 @@ footer div img {
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
+}
+
+
+/*anonces  */
+
+#images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#images>img {
+    width: 250px;
+    height: 200px;
+    justify-content: space-around;
+    display: flex;
+    border: 1px solid lightgray;
+}
+
+
+/* #images>img:hover {
+    width: 700px;
+    height: 600px;
+} */
+
+#resume {
+    margin-top: 20px;
+    color: grey;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 3px 3px lightgray;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: grey;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 3px 3px lightgray;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
 }
