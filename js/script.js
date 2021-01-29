@@ -14,7 +14,7 @@ ContentManager.prototype.generateAnnonces = function() {
     //for (let i = 0; i < box.length; i++) {
     let divelement = document.getElementById("section");
     if (divelement) {
-        let strhtml = "";
+        let strhtml = "<h1>Nos offres</h1>";
         for (let i = 0; i < this.annonces.length / 2; i++) {
             //let strhtml = "";
             //let divelement = document.getElementById(box[i]);
@@ -24,9 +24,10 @@ ContentManager.prototype.generateAnnonces = function() {
 
             for (j; j < k + 2; j++) {
                 if (this.annonces[j]) {
+                    let url = this.annonces[j].statut == "V" ? "./vendre.html?pno=" + this.annonces[j].no + "" : "./louer.html?pno=" + this.annonces[j].no + ""
 
                     strhtml += `
-            <a href="#">
+            <a href="` + url + `">
                 <figure>
                     <img src="./asset/small/${this.annonces[j].images[0]}" alt="">
                     <figcaption>
@@ -56,7 +57,7 @@ ContentManager.prototype.generateAnnonces = function() {
 
 
 
-ContentManager.prototype.generateVendreAnnonces = function() {
+ContentManager.prototype.generateVendreAnnonces = function(pno = 0) {
     let strHtml = "";
     let element = document.getElementById("vendre");
     //let vstatus = "";
@@ -69,7 +70,9 @@ ContentManager.prototype.generateVendreAnnonces = function() {
            }*/
 
         for (let i = 0; i < this.annonces.length; i++) {
-            if (this.annonces[i].statut == "V") {
+
+            if ((this.annonces[i].statut == "V") && (pno == 0 || pno == this.annonces[i].no)) {
+
 
                 strHtml += `<div id="images">`;
                 for (let j = 1; j < this.annonces[i].images.length; j++) {
@@ -98,7 +101,7 @@ ContentManager.prototype.generateVendreAnnonces = function() {
 
 
 
-ContentManager.prototype.generateLouerAnnonces = function() {
+ContentManager.prototype.generateLouerAnnonces = function(pno = 0) {
     let strHtml = "";
     let element = document.getElementById("louer");
     //let vstatus = "";
@@ -111,7 +114,9 @@ ContentManager.prototype.generateLouerAnnonces = function() {
            }*/
 
         for (let i = 0; i < this.annonces.length; i++) {
-            if (this.annonces[i].statut == "L") {
+
+            if ((this.annonces[i].statut == "L") && (pno == 0 || pno == this.annonces[i].no)) {
+
 
                 strHtml += `<div id="images">`;
                 for (let j = 1; j < this.annonces[i].images.length; j++) {
@@ -135,6 +140,10 @@ ContentManager.prototype.generateLouerAnnonces = function() {
     }
 
 }
+
+
+
+
 
 
 
@@ -259,7 +268,15 @@ let lesannonces = new ContentManager([{
 
 ]);
 
+function getParameterURL() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+        vars[key] = value;
+    });
+    return vars.pno;
+}
+
 lesannonces.generateAnnonces();
 
-lesannonces.generateVendreAnnonces();
-lesannonces.generateLouerAnnonces();
+lesannonces.generateVendreAnnonces(getParameterURL());
+lesannonces.generateLouerAnnonces(getParameterURL());
