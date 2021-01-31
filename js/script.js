@@ -29,7 +29,7 @@ ContentManager.prototype.generateAnnonces = function() {
                     strhtml += `
             <a href="` + url + `">
                 <figure>
-                    <img src="./asset/small/${this.annonces[j].images[0]}" alt="">
+                    <img src="./asset/small/${this.annonces[j].images[0]}" alt="image">
                     <figcaption>
                         <h3>${this.annonces[j].title}</h3>
                         <p>
@@ -57,6 +57,9 @@ ContentManager.prototype.generateAnnonces = function() {
 
 
 
+
+
+
 ContentManager.prototype.generateVendreAnnonces = function(pno = 0) {
     let strHtml = "";
     let element = document.getElementById("vendre");
@@ -78,7 +81,7 @@ ContentManager.prototype.generateVendreAnnonces = function(pno = 0) {
                 for (let j = 1; j < this.annonces[i].images.length; j++) {
 
 
-                    strHtml += `<img alt="" src="./asset/anonces/${this.annonces[i].images[j]}"/>`;
+                    strHtml += `<img alt="image" src="./asset/anonces/${this.annonces[i].images[j]}" />`;
 
                 }
                 strHtml += `</div>`;
@@ -122,7 +125,7 @@ ContentManager.prototype.generateLouerAnnonces = function(pno = 0) {
                 for (let j = 1; j < this.annonces[i].images.length; j++) {
 
 
-                    strHtml += `<img alt="" src="./asset/anonces/${this.annonces[i].images[j]}"/>`;
+                    strHtml += `<img alt="image" src="./asset/anonces/${this.annonces[i].images[j]}"/>`;
 
                 }
                 strHtml += `</div>`;
@@ -140,8 +143,6 @@ ContentManager.prototype.generateLouerAnnonces = function(pno = 0) {
     }
 
 }
-
-
 
 
 
@@ -174,7 +175,7 @@ let lesannonces = new ContentManager([{
     },
     {
         no: 3,
-        title: "Villa luxe",
+        title: "Villa Luxe",
         prix: "550000€",
         statut: "V",
         description: "L'entrée distribue une cuisine (avec son cellier - accès garage) et un bel espace de vie disposant d'un accès de plain pied à la terrasse et au jardin. Le rez-de-chaussée propose également 2 chambres ayant chacune un accès de plain pied au jardin, une salle de bain ainsi que des WC séparés. Les combles aménagés vous permettent de profiter de 2 belles chambres et d'une salle d'eau avec WC. Vous pourrez également aménager la dernière partie des combes pour créer une 5ème chambre. Enfin, vous pourrez vous prélasser dans le jardin arboré et sans vis-à-vis d'environ 500 m². Nous vous attendons pour les visites ! Prix: 549000.0 euros, Honoraires charge vendeur.",
@@ -185,7 +186,7 @@ let lesannonces = new ContentManager([{
     },
     {
         no: 4,
-        title: "Magnifique appartement",
+        title: "Magnifique Appartement",
         prix: "5500€",
         statut: "L",
         description: "Rez-de-jardin: Entrée, 2 chambres dont une avec salle de bains, salle d'eau, WC indépendant, placards, buanderie, garage.1er étage: Salon, salle à manger, cuisine aménagée,3 chambres, salles de bains avec WC, salle d'eau, placards, terrasses.Chauffage au gaz - Isolation performante - Double vitrage - VMC.Mandat N° 1443. Loyer CC: 5 490 euros. Loyer HC: 5 490 euros. Provision sur charges 0 euros/mois, régularisation annuelle. Dépôt de garantie 5 490 euros. Honoraires de 3 750 euros TTC à la charge du locataire comprenant 750 euros pour l'état des lieux. Bail code civil nous consulter.",
@@ -196,7 +197,7 @@ let lesannonces = new ContentManager([{
     },
     {
         no: 5,
-        title: "Pavillon",
+        title: "Maison",
         prix: "400000€",
         statut: "V",
         description: "La résidence est située dans le quartier niçois de Saint Sylvestre, à deux pas de la Villa Arson. Cette réalisation proche du centre-ville de Nice est en plein coeur d'un quartier idéal pour vivre. Tous les commerces, écoles, services, sports, tramway sont à moins de 5 minutes à pied. D'architecture moderne, cette résidence, propose des appartements idéalement agencés, certains en duplex, avec de belles terrasses et/ou jardin pour tous. Villas sur le toit en dernier étage avec de magnifiques espaces extérieurs. Garages fermés en sous-sols et les accès sont sécurisés.",
@@ -207,7 +208,7 @@ let lesannonces = new ContentManager([{
     },
     {
         no: 6,
-        title: "Maison luxe",
+        title: "Maison Luxe",
         prix: "1700€",
         statut: "L",
         description: "Jolie maison entièrement meublée dans un beau lotissement au calme, près des accès autoroute et du centre commercial Bay 2. Au rez-de-chaussée vous découvrirez un agréable espace de vie comprenant un séjour, une salle à mangé puis un cuisine de plus de 33m² au total ainsi qu'un sas avec WC et de nombreux rangement. La cuisine puis la salle à mangé donne accès à une terrasse et un jardin paysagé sans vis à vis. A l'étage elle vous offre un dégagement avec placard desservant trois chambres dont une de plus de 13m² toutes avec rangements ainsi qu'une salle de bains avec WC. Place de parking extérieur libre. Loyer CC: 1 700 euros Dépôt de garantie: 3 340 euros Honoraires: 1 049.49 euros.",
@@ -218,48 +219,27 @@ let lesannonces = new ContentManager([{
     },
     {
         no: 7,
-        title: "App",
+        title: "Apartement",
         prix: "1700€",
         statut: "L",
-        description: "Jolie maison entièrement meublée dans un beau lotissement au calme, près des accès autoroute et du centre commercial Bay 2. Au rez-de-chaussée vous découvrirez un agréable espace de vie comprenant un séjour, une salle à mangé puis un cuisine de plus de 33m² au total ainsi qu'un sas avec WC et de nombreux rangement. La cuisine puis la salle à mangé donne accès à une terrasse et un jardin paysagé sans vis à vis. A l'étage elle vous offre un dégagement avec placard desservant trois chambres dont une de plus de 13m² toutes avec rangements ainsi qu'une salle de bains avec WC. Place de parking extérieur libre. Loyer CC: 1 700 euros Dépôt de garantie: 3 340 euros Honoraires: 1 049.49 euros.",
-        images: ["small-photo7_1.jpg", "photo6_2.jpg"],
+        description: "située dans la centre ville ,calme, proche des commerces et des transports.Dans le quartier très prisé de Saint germain des prés, rue du Dragon, magnifique 2 Pièces de 40,7m² au 1er étage composé d'un séjour avec cuisine équipée américaine, deux salles de douche, une chambre, une buanderie, wc séparé et de nombreux placards.Une cave de 6 m² complète ce bien.Ce bien vous séduira par sa localisation, et son calme. ",
+        images: ["small-photo7_1.jpg", "photo6_2.jpg", "photo1_2.jpg"],
         local: "Ile-de-France",
         surface: "80",
         piece: "5"
     },
     {
         no: 8,
-        title: "App",
+        title: "Apartement",
         prix: "350000€",
         statut: "V",
-        description: "Jolie maison entièrement meublée dans un beau lotissement au calme, près des accès autoroute et du centre commercial Bay 2. Au rez-de-chaussée vous découvrirez un agréable espace de vie comprenant un séjour, une salle à mangé puis un cuisine de plus de 33m² au total ainsi qu'un sas avec WC et de nombreux rangement. La cuisine puis la salle à mangé donne accès à une terrasse et un jardin paysagé sans vis à vis. A l'étage elle vous offre un dégagement avec placard desservant trois chambres dont une de plus de 13m² toutes avec rangements ainsi qu'une salle de bains avec WC. Place de parking extérieur libre. Loyer CC: 1 700 euros Dépôt de garantie: 3 340 euros Honoraires: 1 049.49 euros.",
-        images: ["small-photo8_1.jpg", "photo8_2.jpg", "photo8_3.jpg"],
-        local: "Ile-de-France",
-        surface: "80",
-        piece: "5"
-    },
-    {
-        no: 9,
-        title: "App",
-        prix: "1700€",
-        statut: "L",
-        description: "Jolie maison entièrement meublée dans un beau lotissement au calme, près des accès autoroute et du centre commercial Bay 2. Au rez-de-chaussée vous découvrirez un agréable espace de vie comprenant un séjour, une salle à mangé puis un cuisine de plus de 33m² au total ainsi qu'un sas avec WC et de nombreux rangement. La cuisine puis la salle à mangé donne accès à une terrasse et un jardin paysagé sans vis à vis. A l'étage elle vous offre un dégagement avec placard desservant trois chambres dont une de plus de 13m² toutes avec rangements ainsi qu'une salle de bains avec WC. Place de parking extérieur libre. Loyer CC: 1 700 euros Dépôt de garantie: 3 340 euros Honoraires: 1 049.49 euros.",
-        images: ["small-photo7_1.jpg", "photo6_2.jpg"],
-        local: "Ile-de-France",
-        surface: "80",
-        piece: "5"
-    },
-    {
-        no: 10,
-        title: "App",
-        prix: "350000€",
-        statut: "V",
-        description: "Jolie maison entièrement meublée dans un beau lotissement au calme, près des accès autoroute et du centre commercial Bay 2. Au rez-de-chaussée vous découvrirez un agréable espace de vie comprenant un séjour, une salle à mangé puis un cuisine de plus de 33m² au total ainsi qu'un sas avec WC et de nombreux rangement. La cuisine puis la salle à mangé donne accès à une terrasse et un jardin paysagé sans vis à vis. A l'étage elle vous offre un dégagement avec placard desservant trois chambres dont une de plus de 13m² toutes avec rangements ainsi qu'une salle de bains avec WC. Place de parking extérieur libre. Loyer CC: 1 700 euros Dépôt de garantie: 3 340 euros Honoraires: 1 049.49 euros.",
+        description: "Tous les commerces, écoles, services, sports, tramway sont à moins de 5 minutes à pied. D'architecture moderne, cette résidence, propose des appartements idéalement agencés, certains en duplex, avec de belles terrasses et/ou jardin pour tous. Villas sur le toit en dernier étage avec de magnifiques espaces extérieurs. Garages fermés en sous-sols et les accès sont sécurisés.",
         images: ["small-photo8_1.jpg", "photo8_2.jpg", "photo8_3.jpg"],
         local: "Ile-de-France",
         surface: "80",
         piece: "5"
     }
+
 
 
 
@@ -280,3 +260,33 @@ lesannonces.generateAnnonces();
 
 lesannonces.generateVendreAnnonces(getParameterURL());
 lesannonces.generateLouerAnnonces(getParameterURL());
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgElements = document.querySelectorAll("#images>img");
+var modalImg = document.getElementById("img01");
+//var captionText = document.getElementById("caption");
+imgElements.forEach(img => {
+
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        //captionText.innerHTML = this.alt;
+    }
+});
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+if (span) {
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+}
