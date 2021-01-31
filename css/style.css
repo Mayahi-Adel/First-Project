@@ -454,7 +454,7 @@ footer div img {
 }
 
 
-#div_search{
+ #div_search{
     position: absolute;
     top: 430px;
     height: 20px;
@@ -468,4 +468,8 @@ footer div img {
     padding: 5px;
     width: 200px;
     color: gray;
-}
+} 
+
+
+
+ 
